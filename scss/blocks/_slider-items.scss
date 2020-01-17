@@ -1,0 +1,11 @@
+.slider-items {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    width: 300%;
+
+    &__item {
+        width: 100%;
+    }
+}

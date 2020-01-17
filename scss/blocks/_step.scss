@@ -1,0 +1,19 @@
+.step {
+    padding: 60px 0px;
+    @include from('lg') {
+        padding: 50px 0px;
+    }
+    @include from('md') {
+        padding: 40px 0px;
+    }
+    @include from('sm') {
+        padding: 30px 0px;
+    }
+
+    &__text {
+        font-size: 2rem;
+        @include from(sm) {
+            font-size: 1.5rem;
+        }
+    }
+}

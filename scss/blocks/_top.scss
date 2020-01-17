@@ -1,0 +1,15 @@
+.top {
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include from(sm) {
+        justify-content: center
+    }
+
+    &__additional {
+        @include from(sm) {
+            display: none;
+        }
+    }
+}

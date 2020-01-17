@@ -1,0 +1,14 @@
+@import "../adaptive/bundle";
+
+.hide-sm {
+    @include from(sm) {
+        display: none;
+    }    
+}
+
+.show-sm {
+    display: none;
+    @include from(sm) {
+        display: initial;
+    }
+}

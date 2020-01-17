@@ -1,0 +1,23 @@
+.fast {
+    transition: .3s;
+}
+
+.smooth {
+    transition: .5s;
+}
+
+.long {
+    transition: .8s;
+}
+
+.very-long {
+    transition: 1.2s;
+}
+
+$delay-step: 0.2s;
+$delay-levels: 10; 
+@for $level from 1 through $delay-levels {
+    .delay-#{$level} {
+        transition-delay: $delay-step * $level;
+    }
+}

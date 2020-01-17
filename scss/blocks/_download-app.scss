@@ -1,0 +1,26 @@
+@import "../variables";
+
+.download-app {
+    display: flex;
+    @include from(md) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__logo {
+        margin-right: 20px;
+        @include from(md) {
+            margin-bottom: 70px;
+        }
+        @include from(sm) {
+            width: 73px;
+            margin-bottom: 60px;
+        }
+
+        &.preanimated {
+            transform: translateX(-200%);
+            opacity: 0;
+        }
+    }
+}

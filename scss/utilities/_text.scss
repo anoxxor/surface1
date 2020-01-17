@@ -1,0 +1,37 @@
+@import "variables";
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-dark {
+    color: $color-dark;
+}
+
+.text-white {
+    color: $color-white;
+}
+
+.text-light {
+    color: $color-light;
+}
+
+.text-secondary {
+    color: $color-secondary;
+}
+
+.text-thin {
+    font-weight: 300;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-bold {
+    font-weight: 700;
+}

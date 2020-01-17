@@ -1,0 +1,40 @@
+.bg-primary {
+    background-color: $color-primary;
+}
+
+.bg-dark {
+    background-color: $color-dark;
+}
+
+.bg-light {
+    background-color: $color-light;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
+
+.after-primary {
+    &::after {
+        background-color: $color-primary;
+    }
+}
+
+.after-dark {
+    &::after {
+        background-color: $color-dark;
+    }
+}
+
+.after-light {
+    &::after {
+        background-color: $color-light;
+    }
+}
+
+.after-white {
+    &::after {
+        background-color: $color-white;
+    }
+}
+

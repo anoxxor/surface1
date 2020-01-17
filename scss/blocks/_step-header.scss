@@ -1,0 +1,40 @@
+@import "../variables";
+
+.step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &__number {
+        font-size: 2rem;
+        margin-right: 10px;
+        @include from(sm) {
+            font-size: 1.4rem;
+        }
+
+        &::after {
+            $h: 5px;
+            content: '';
+            display: block;
+            width: 100%;
+            height: $h;
+            border-radius: $h/2;
+            @include from(sm) {
+                $h: 4px;
+                height: $h;
+                border-radius: $h/2;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 3.6rem;
+        color: $color-secondary;
+        @include from(md) {
+            font-size: 3.4rem;
+        }
+        @include from(sm) {
+            font-size: 2.8rem;
+        }
+    }
+}

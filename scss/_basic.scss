@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font: {
+        family: "Proxima Nova";
+        size: 62.5%;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        text-transform: uppercase;
+    }
+}
+
+h1 {
+    font-size: 9rem;
+}
+
+h4 {
+    font-size: 3.6rem;
+}
+
+h5 {
+    font-size: 1.4rem
+}
+
+a {
+    text-decoration: none;
+}

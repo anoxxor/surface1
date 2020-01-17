@@ -1,0 +1,72 @@
+@import "../variables";
+
+.action-number {
+    $side: 160px;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    width: $side;
+    height: $side;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    transform: translateX(-50%) translateY(-50%);
+    @include from(lg) {
+        $size: 140px;
+        top: 700px;
+        left: 35px;
+        width: $size;
+        height: $size;
+        transform: translateY(-80%);
+    }
+    @include from(md) {
+        $size: 120px;
+        top: 600px;
+        width: $size;
+        height: $size;
+    }
+    @include from(sm) {
+        $size: 70px;
+        top: 350px;
+        left: 20px;
+        width: $size;
+        height: $size;
+    }
+
+    &.preanimated {
+        transform: translateX(-50%) translateY(-50%) scale(0) rotateZ(180deg);
+        opacity: 0;
+        @include from(lg) {
+            transform: translateY(-180%) scale(0);
+        }
+    }
+
+    &__text {
+        color: $color-white;
+        font: {
+            size: 2.4rem;
+            weight: 700;
+        }
+        @include from(sm) {
+            font-size: 1.4rem;
+        }
+
+        &::after {
+            $h: 5px;
+            content: '';
+            display: block;
+            width: 100%;
+            height: $h;
+            border-radius: $h/2;
+            margin-top: 5px;
+            background-color: $color-white;
+            opacity: 0.3;
+            @include from(sm) {
+                $h: 4px;
+                height: $h;
+                border-radius: $h/2;
+            }
+        }
+    }
+}

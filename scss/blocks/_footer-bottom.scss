@@ -1,0 +1,29 @@
+@import "../variables";
+
+.footer-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 60px;
+    @include from(lg) {
+        margin: 40px;
+    }
+    margin-top: 0px;
+
+    &__brand {
+        @include from(md) {
+            display: none;
+        }
+    }
+
+    &__contact {
+        position: absolute;
+        right: 0px;
+        text-transform: capitalize;
+        font-size: 2rem;
+        color: $color-white;
+        @include from(md) {
+            display: none;
+        }
+    }
+}

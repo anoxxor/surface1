@@ -1,0 +1,82 @@
+@import "../variables";
+
+.footer-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -100;
+        top: 50%;
+        left: 0px;
+        display: block;
+        width: 210px;
+        height: 6.7px; 
+        transform: rotateZ(-55deg) translateY(-50%);
+        background-color: $color-primary;
+        @include from(lg) {
+            width: 190px;
+            height: 6px;
+        }
+        @include from(md) {
+            width: 170px;
+            height: 6px;
+        }
+        @include from(sm) {
+            width: 85px;
+            height: 4px
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -100;
+        top: 50%;
+        right: 5%;
+        display: block;
+        width: 420px;
+        height: 6.7px;
+        transform: rotateZ(-55deg) translateY(-50%);
+        background-color: $color-primary;
+        @include from(lg) {
+            width: 380px;
+            height: 6px;
+        }
+        @include from(md) {
+            width: 320px;
+            height: 5px;
+        }
+        @include from(sm) {
+            width: 155px;
+            height: 4px
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        line-height: 9rem;
+        @include from(md) {
+            font-size: 7rem;
+            line-height: 7rem;
+        }
+        @include from(sm) {
+            font-size: 3.4rem;
+            line-height: 3.4rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 3.6rem;
+        color: scale-color($color-primary, $lightness: 20%);
+        @include from(md) {
+            font-size: 3rem;
+        }
+        @include from(sm) {
+            font-size: 1.5rem;
+        }
+    }
+}

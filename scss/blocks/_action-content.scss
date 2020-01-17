@@ -1,0 +1,58 @@
+@import "../variables";
+
+.action-content {
+    &::after {
+        $h: 5px;
+        content: '';
+        display: block;
+        width: 25px;
+        height: $h;
+        border-radius: $h/2;
+        margin: {
+            top: 90px;
+            bottom: 140px;
+        }
+        background-color: $color-primary;
+        @include from(lg) {
+            margin: {
+                top: 60px;
+                bottom: 65px;
+            }
+        }
+        @include from(sm) {
+            margin: {
+                top: 25px;
+                bottom: 50px;
+            }
+        }
+    }
+
+    &__header {
+        color: $color-light;
+        margin-top: 290px;
+        transform: translateY(-50%);
+        @include from(lg) {
+            transform: none;
+            margin: {
+                top: 90px;
+                bottom: 35px;
+            }
+        }
+        @include from(sm) {
+            margin: {
+                top: 35px;
+                bottom: 25px;
+            }
+            font-size: 2.8rem;
+        }
+    }
+
+    &__text {
+        font-size: 2.4rem;
+        width: 400px;
+        height: auto;
+        @include from(lg) {
+            width: initial;
+        }
+    }
+}

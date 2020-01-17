@@ -1,0 +1,90 @@
+@import "../variables";
+
+
+.main-header {
+    position: relative;
+    @include from(md) {
+        margin-bottom: auto;
+    }
+
+    &__string {
+        @include from('lg') {
+            font-size: 7.2rem;
+        }
+        @include from('md') {
+            font-size: 6.4rem;
+        }
+        @include from('sm') {
+            font-size: 3.2rem;
+        }
+
+        &--right {
+            position: relative;
+            z-index: 100;
+
+            &.preanimated {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        &--left {
+            margin-left: auto;
+            width: 1000px;
+            @include from('lg') {
+                width: 800px;
+            }
+            @include from('md') {
+                width: 452px;
+            }
+            @include from('sm') {
+                width: initial;
+                max-width: 226px;
+            }
+
+            &.preanimated {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__cross-line {
+        $rotate: -52deg;
+        position: absolute;
+        top: 107px;
+        left: 158px;
+        width: 406.2px;
+        height: 5.6px;
+        background-color: $color-primary; 
+        transform: rotateZ($rotate) translateX(0px) translateY(0px);
+        @include from('lg') {
+            width: 325px;
+            height: 4.5px;
+            top: 85px;
+            left: 10px;
+        }
+        @include from('md') {
+            z-index: -100;
+            width: 406.2px;
+            height: 5.6px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateZ($rotate);
+        }
+        @include from('sm') {
+            width: 203.1px;
+            height: 2.8px
+        }
+
+        &.preanimated {
+            transform: rotateZ($rotate) translateX(406px);
+            opacity: 0;
+
+            @include from(md) {
+                transform: translate(-50%, -50%) rotateZ($rotate);
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin from($size) {
+    $max: map-get($breakpoints-max, $size);
+
+    @media screen and (max-width: $max) {
+        @content
+    }
+}

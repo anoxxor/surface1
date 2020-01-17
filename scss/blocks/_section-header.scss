@@ -1,0 +1,14 @@
+@import "../variables";
+
+.section-header {
+    color: $color-light;
+    @include from('lg') {
+        font-size: 7.2rem;
+    }
+    @include from('md') {
+        font-size: 6.4rem;
+    }
+    @include from('sm') {
+        font-size: 3.2rem;
+    }
+}

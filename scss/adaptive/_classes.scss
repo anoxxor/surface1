@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+    max-width: map-get($container-sizes, default);
+    min-width: map-get($container-sizes, default);
+    margin: 0px auto;
+    align-self: center;
+
+    @media screen and (max-width: map-get($breakpoints-max, lg)) {
+        max-width: map-get($container-sizes, lg);
+        min-width: map-get($container-sizes, lg);
+    }
+
+    @media screen and (max-width: map-get($breakpoints-max, md)) {
+        max-width: map-get($container-sizes, md);
+        min-width: map-get($container-sizes, md);
+    }
+
+    @media screen and (max-width: map-get($breakpoints-max, sm)) {
+        max-width: map-get($container-sizes, sm);
+        min-width: map-get($container-sizes, sm);
+    }
+
+    @media screen and (max-width: map-get($breakpoints-max, xs)) {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0px;
+        margin: {
+            left: 0px;
+            right: 0px;
+        }
+    }
+}
+
+.container-stretch {
+    max-width: map-get($container-sizes, default);
+    margin: 0px auto;
+    height: 100%;
+    padding: 0px 10px;
+    @include from(sm) {
+        padding: 0px 5px;
+    }
+}

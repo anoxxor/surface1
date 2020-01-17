@@ -1,0 +1,13 @@
+@import "variables";
+
+@mixin bg-dimmed {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: transparentize($color-dark, 0.1)
+    }
+}

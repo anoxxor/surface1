@@ -1,0 +1,13 @@
+.download-group {
+    align-self: center;
+    width: 672px;
+    display: flex;
+    justify-content: space-between;
+    @include from(md) {
+        width: 587px;
+    }
+    @include from(sm) {
+        width: 292px;
+        //margin-bottom: 30px
+    }
+}

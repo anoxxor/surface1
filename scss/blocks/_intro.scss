@@ -1,0 +1,63 @@
+@import "../variables";
+
+.intro {
+    position: relative;
+    min-height: 800px;
+    height: 100vh;
+    padding: {
+        top: 50px;
+        bottom: 100px;
+    }
+    background: {
+        image: url("../img/header.jpg");
+        position: center;
+        size: cover;
+    }
+    @include from(lg) {
+        min-height: 600px;
+        padding: {
+            top: 45px;
+            bottom: 70px;
+        }
+    }
+    @include from(md) {
+        min-height: 500px;
+        padding: {
+            top: 40px;
+            bottom: 60px;
+        }
+    }
+    @include from(sm) {
+        min-height: 450px;
+        padding: {
+            top: 30px;
+            bottom: 30px;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: transparentize($color-dark, 0.1)
+    }
+
+    & .container-stretch {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        @include from(md) {
+            justify-content: space-between;
+        }
+    }
+
+    & .download-group {
+        @include from(sm) {
+            margin-bottom: 30px;
+        }
+    }
+}

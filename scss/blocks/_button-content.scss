@@ -1,0 +1,19 @@
+@import '../variables';
+
+.button-content {
+    color: $color-white;
+
+    &__text {
+        font-weight: 300;
+        @include from(sm) {
+            font-size: 0.8rem;
+        }
+    }
+
+    &__market-name {
+        font-weight: 600;
+        @include from(sm) {
+            font-size: 0.8rem;
+        }
+    }
+}
