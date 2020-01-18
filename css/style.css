@@ -217,7 +217,7 @@ a {
   height: 100vh;
   padding-top: 50px;
   padding-bottom: 100px;
-  background-image: url("../img/header.jpg");
+  background-image: url("img/header.jpg");
   background-position: center;
   background-size: cover; }
   @media screen and (max-width: 1320px) {
@@ -686,15 +686,15 @@ a {
       .action__picture {
         height: 350px; } }
     .action__picture.be-active {
-      background-image: url("../img/be-active.jpg");
+      background-image: url("img/be-active.jpg");
       background-size: cover;
       background-position: center; }
     .action__picture.find-contact {
-      background-image: url("../img/find-contact.jpg");
+      background-image: url("img/find-contact.jpg");
       background-size: cover;
       background-position: center; }
     .action__picture.work-it {
-      background-image: url("../img/work-it.jpg");
+      background-image: url("img/work-it.jpg");
       background-size: cover;
       background-position: center; }
   .action-content {
@@ -824,7 +824,7 @@ a {
   position: relative;
   height: 100vh;
   min-height: 1000px;
-  background-image: url("../img/footer-bg-image.jpg");
+  background-image: url("img/footer-bg-image.jpg");
   background-size: cover;
   background-position: center; }
   .footer::before {
