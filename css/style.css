@@ -211,6 +211,50 @@ h5 {
 a {
   text-decoration: none; }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+body {
+  overflow: hidden; }
+
+.loader-wrapper {
+  position: absolute;
+  z-index: 200;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; }
+
+.loader {
+  position: relative;
+  z-index: 300;
+  margin: 75px auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden; }
+  .loader div {
+    height: 100%; }
+
+.loader, .loader div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  animation: rotate linear 3.5s infinite;
+  border-top-color: #5e42b0;
+  border-left-color: #0a0e34;
+  animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+  animation-duration: 3s; }
+
 .intro {
   position: relative;
   min-height: 800px;

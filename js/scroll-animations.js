@@ -38,7 +38,11 @@ function scrollHandler(e) {
     animated.centerScrolled.each(checkCenterScrolled);
 }
 
-$(window).on("scroll", scrollHandler);
-$(window).trigger("scroll");
+$(window).on("load", function() {
+    setTimeout(function() {
+        $(window).on("scroll", scrollHandler);
+        $(window).trigger("scroll");
+    }, 400);
+});
 
 })();
