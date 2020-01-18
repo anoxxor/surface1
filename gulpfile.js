@@ -3,6 +3,7 @@ let sass = require("gulp-sass");
 let concat = require("gulp-concat");
 let uglify = require("gulp-uglify");
 let cleancss = require("gulp-clean-css");
+let autoprefixer = require("gulp-autoprefixer");
 sass.compiler = require("node-sass");
 
 let sassFiles = ["sass/**/*.sass", "sass/**/*.scss", "scss/**/*.scss", "scss/**/*.sass"]
@@ -27,5 +28,6 @@ exports.cssbundle = function() {
     return src("css/**/*.css")
         .pipe(concat("bundle.min.css"))
         .pipe(cleancss())
+        .pipe(autoprefixer())
         .pipe(dest("css/"));
 }
