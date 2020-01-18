@@ -289,17 +289,17 @@ a {
       opacity: 0; }
   .main-header__string--left {
     margin-left: auto;
-    width: 1000px; }
+    width: 1001px; }
     @media screen and (max-width: 1320px) {
       .main-header__string--left {
-        width: 800px; } }
+        width: 801px; } }
     @media screen and (max-width: 920px) {
       .main-header__string--left {
-        width: 452px; } }
+        width: 453px; } }
     @media screen and (max-width: 620px) {
       .main-header__string--left {
         width: initial;
-        max-width: 226px; } }
+        max-width: 227px; } }
     .main-header__string--left.preanimated {
       transform: translateX(-100%);
       opacity: 0; }
@@ -354,16 +354,17 @@ a {
       width: 100%; } }
   @media screen and (max-width: 620px) {
     .sports {
-      justify-content: space-evenly;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      justify-content: center; } }
   @media screen and (max-width: 920px) {
     .sports__sport {
       font-size: 1.6rem; } }
   @media screen and (max-width: 620px) {
     .sports__sport {
-      padding: 0px 14px;
+      flex-basis: 33.33333%;
+      text-align: center;
       font-size: 1.2rem;
-      line-height: 2em; } }
+      margin-bottom: 1.2rem; } }
   .sports__sport.preanimated {
     transform: translateY(100px);
     opacity: 0; }
@@ -773,7 +774,7 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #5e42b0;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%) scale(1) rotateZ(0deg); }
   @media screen and (max-width: 1320px) {
     .action-number {
       top: 700px;
@@ -853,7 +854,7 @@ a {
 .footer-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-basis: 100%; }
 
@@ -930,12 +931,17 @@ a {
         font-size: 1.5rem; } }
 
 .download-app {
-  display: flex; }
+  display: flex;
+  margin-bottom: 150px; }
   @media screen and (max-width: 920px) {
     .download-app {
       flex-direction: column;
       align-items: center;
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: 70px; } }
+  @media screen and (max-width: 620px) {
+    .download-app {
+      margin-bottom: 60px; } }
   .download-app__logo {
     margin-right: 20px; }
     @media screen and (max-width: 920px) {

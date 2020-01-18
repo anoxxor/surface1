@@ -7,8 +7,8 @@
         width: 100%;
     }
     @include from(sm) {
-        justify-content: space-evenly;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__sport {
@@ -16,9 +16,10 @@
             font-size: 1.6rem;
         }
         @include from(sm) {
-            padding: 0px 14px;
+            flex-basis: (100%/3);
+            text-align: center;
             font-size: 1.2rem;
-            line-height: 2em;
+            margin-bottom: 1.2rem;
         }
         
         &.preanimated {

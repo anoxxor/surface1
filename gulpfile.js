@@ -21,13 +21,13 @@ exports.jsbundle = function() {
     return src("js/**/*.js")
         .pipe(concat("bundle.min.js"))
         .pipe(uglify())
-        .pipe(dest("js/"));
+        .pipe(dest("./"));
 }
 
 exports.cssbundle = function() {
     return src("css/**/*.css")
         .pipe(concat("bundle.min.css"))
-        .pipe(cleancss())
         .pipe(autoprefixer())
-        .pipe(dest("css/"));
+        .pipe(cleancss())
+        .pipe(dest("./"));
 }

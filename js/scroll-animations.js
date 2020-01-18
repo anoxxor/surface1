@@ -30,7 +30,8 @@ function checkCenterScrolled(i, element) {
 }
 
 function scrollHandler(e) {
-    scrolled = $("body").scrollTop() || $("html").scrollTop() + document.documentElement.clientHeight;
+    window$ = $(window);
+    scrolled = window$.scrollTop() + window$.height();
     animated.default.each(checkCenterScrolled);
     animated.topScrolled.each(checkTopScrolled);
     animated.bottomScrolled.each(checkBottomScrolled);

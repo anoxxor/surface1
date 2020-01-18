@@ -30,16 +30,16 @@
 
         &--left {
             margin-left: auto;
-            width: 1000px;
+            width: 1001px;
             @include from('lg') {
-                width: 800px;
+                width: 801px;
             }
             @include from('md') {
-                width: 452px;
+                width: 453px;
             }
             @include from('sm') {
                 width: initial;
-                max-width: 226px;
+                max-width: 227px;
             }
 
             &.preanimated {
