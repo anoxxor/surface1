@@ -5,7 +5,7 @@ $(window).on("load", function() {
     loader.fadeOut();
     setTimeout(function() {
         loader.remove();
-        $("body").css({overflow: "initial"});
+        $("body").css({overflow: "scroll"});
     }, 400);
 });
 
