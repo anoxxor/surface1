@@ -1,0 +1,32 @@
+{
+  "name": "surface1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anoxxor/surface1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anoxxor/surface1/issues"
+  },
+  "homepage": "https://github.com/anoxxor/surface1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

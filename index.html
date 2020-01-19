@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Surface 1</title>
 
+    <!-- slider -->
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+
+    <!-- project bundle -->
     <link rel="stylesheet" href="bundle.min.css">   
 </head>
 <body>
@@ -131,9 +136,9 @@
 
             <img src="img/athlets-mobile.png" alt="Footballer" class="steps__picture">
     
-            <div class="slider" data-slider-name="athlets">
-                <div class="slider-items" data-parent-slider="athlets">
-                    <div class="slider-items__item step">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">01</h3>
                             <h2 class="step-header__text">connection</h2>
@@ -141,7 +146,7 @@
                         <p class="step__text">Connect with coaches directly, you can ping coaches to view profile.</p>
                     </div>
     
-                    <div class="slider-items__item step">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">02</h3>
                             <h2 class="step-header__text">collaboration</h2>
@@ -149,7 +154,7 @@
                         <p class="step__text">Work with other student athletes to  increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.</p>
                     </div>
     
-                    <div class="slider-items__item step">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">03</h3>
                             <h2 class="step-header__text">growth</h2>
@@ -157,12 +162,7 @@
                         <p class="step__text">Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc</p>
                     </div>
                 </div>
-                <div class="slider-indicators"  data-parent-slider="athlets">
-                    <div class="slider-indicators__item active"></div>
-                    <div class="slider-indicators__item"></div>
-                    <div class="slider-indicators__item"></div>
-                </div>
-            </div>
+            </div>   
         </div>
 
         <!-- players -->
@@ -220,9 +220,9 @@
 
             <img src="img/players-mobile.png" alt="Footballer" class="steps__picture">
     
-            <div class="slider" data-slider-name="players">
-                <div class="slider-items" data-parent-slider="players">
-                    <div class="slider-items__item step">
+            <div class="slider-wrapper">
+                <div class="slider" data-slider-name="players">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">01</h3>
                             <h2 class="step-header__text">connection</h2>
@@ -230,7 +230,7 @@
                         <p class="step__text">Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.</p>
                     </div>
     
-                    <div class="slider-items__item step">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">02</h3>
                             <h2 class="step-header__text">collaboration</h2>
@@ -238,18 +238,13 @@
                         <p class="step__text">Work with recruiter to increase your chances of finding talented athlete.</p>
                     </div>
     
-                    <div class="slider-items__item step">
+                    <div class="slider__item step">
                         <div class="step-header">
                             <h3 class="step-header__number">03</h3>
                             <h2 class="step-header__text">growth</h2>
                         </div>
                         <p class="step__text">Save your time, recruit proper athlets for your team.</p>
                     </div>
-                </div>
-                <div class="slider-indicators" data-parent-slider="players">
-                    <div class="slider-indicators__item active"></div>
-                    <div class="slider-indicators__item"></div>
-                    <div class="slider-indicators__item"></div>
                 </div>
             </div>
         </div>
@@ -337,7 +332,13 @@
         </div>
     </footer>
 
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- слайдер -->
+    <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+    
+    <!-- бандл файлов проекта -->
     <script src="bundle.min.js"></script>
 </body>
 </html>

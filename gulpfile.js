@@ -1,22 +1,27 @@
-let { parallel, series, watch, src, dest } = require("gulp");
-let sass = require("gulp-sass");
-let concat = require("gulp-concat");
-let uglify = require("gulp-uglify");
-let cleancss = require("gulp-clean-css");
-let autoprefixer = require("gulp-autoprefixer");
-sass.compiler = require("node-sass");
+const child_process = require("child_process");
 
-let sassFiles = ["sass/**/*.sass", "sass/**/*.scss", "scss/**/*.scss", "scss/**/*.sass"];
-let sassBundle = "scss/style.scss";
+const { parallel, series, watch, src, dest } = require("gulp");
+const sass = require("gulp-sass");
+sass.compiler = require("node-sass");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const cleancss = require("gulp-clean-css");
+const autoprefixer = require("gulp-autoprefixer");
+
+const sassFiles = ["sass/**/*.sass", "sass/**/*.scss", "scss/**/*.scss", "scss/**/*.sass"];
+const sassMain = "scss/style.scss";
+const jsFiles = "js/**/*.js";
+const cssFiles = "css/**/*.css";
+const reloadTriggers = ["bundle.min.css", "bundle.min.js", "index.html"];
 
 function compileSass() {
-    return src(sassBundle)
+    return src(sassMain)
         .pipe(sass().on("error", sass.logError))
         .pipe(dest("css"));
 }
 
 function bundleCss() {
-    return src("css/**/*.css")
+    return src(cssFiles)
         .pipe(concat("bundle.min.css"))
         .pipe(autoprefixer())
         .pipe(cleancss())
@@ -24,20 +29,28 @@ function bundleCss() {
 }
 
 function bundleJs() {
-    return src("js/**/*.js")
+    return src(jsFiles)
         .pipe(concat("bundle.min.js"))
         .pipe(uglify())
         .pipe(dest("./"));
 }
 
-exports.sass = function() {
+exports.sassCompileLive = function() {
     watch(sassFiles, compileSass);
 }
 
-exports.jsbundle = bundleJs;
+exports.jsBundle = bundleJs;
 
-exports.cssbundle = bundleCss;
+exports.cssBundle = bundleCss;
 
-exports.sassbundle = series(compileSass, bundleCss);;
+exports.sassCompileBundle = series( compileSass, bundleCss );;
 
-exports.bundle = parallel(series(compileSass, bundleCss), bundleJs);
+exports.bundle = parallel( series(compileSass, bundleCss), bundleJs );
+
+exports.bundleLive = function() {
+    watch( sassFiles, series(compileSass, bundleCss) );
+    watch( jsFiles, bundleJs );
+
+    let cmd = `live-server "${__dirname}" --watch="${reloadTriggers.join(",")}"`;
+    child_process.exec(cmd);
+}

@@ -1,5 +1,41 @@
+@import "../variables";
+
 .slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+    margin-bottom: 0px !important;
+
+    &-wrapper {
+        position: relative;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: flex;   
+        justify-content: center;
+        list-style: none;
+
+        & li {
+            $d: 15px;
+            width: 15px;
+            height: 15px;
+            margin: 0px $d;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            transition: .2s;
+            cursor: pointer;
+
+            &.slick-active {
+                background-color: $color-primary;
+            }
+        }
+
+        & button {
+            visibility: hidden;
+        }
+    }
 }
