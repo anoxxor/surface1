@@ -223,7 +223,7 @@ body {
   overflow: hidden; }
 
 .loader-wrapper {
-  position: absolute;
+  position: fixed;
   z-index: 200;
   top: 0px;
   bottom: 0px;
@@ -231,7 +231,6 @@ body {
   right: 0px;
   display: flex;
   align-items: center;
-  justify-content: center;
   background-color: #fff; }
 
 .loader {
@@ -241,6 +240,7 @@ body {
   width: 150px;
   height: 150px;
   display: block;
+  margin: 0px auto;
   overflow: hidden; }
   .loader div {
     height: 100%; }

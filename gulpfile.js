@@ -1,4 +1,4 @@
-let { series, watch, src, dest } = require("gulp");
+let { parallel, series, watch, src, dest } = require("gulp");
 let sass = require("gulp-sass");
 let concat = require("gulp-concat");
 let uglify = require("gulp-uglify");
@@ -23,17 +23,21 @@ function bundleCss() {
         .pipe(dest("./"));
 }
 
-exports.sass = function() {
-    watch(sassFiles, compileSass);
-}
-
-exports.jsbundle = function() {
+function bundleJs() {
     return src("js/**/*.js")
         .pipe(concat("bundle.min.js"))
         .pipe(uglify())
         .pipe(dest("./"));
 }
 
+exports.sass = function() {
+    watch(sassFiles, compileSass);
+}
+
+exports.jsbundle = bundleJs;
+
 exports.cssbundle = bundleCss;
 
-exports.sassbundle = series(compileSass, bundleCss);
+exports.sassbundle = series(compileSass, bundleCss);;
+
+exports.bundle = parallel(series(compileSass, bundleCss), bundleJs);
